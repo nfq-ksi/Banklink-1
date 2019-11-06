@@ -23,7 +23,6 @@ use RKD\Banklink\Protocol\IPizza2015;
  *
  * @author Rene Korss <rene.korss@gmail.com>
  */
-
 class Medicinos extends Banklink
 {
     /**
@@ -41,11 +40,11 @@ class Medicinos extends Banklink
     protected $testRequestUrl = 'https://ibs.medbank.lt/loginb2b.aspx';
 
     /**
-     * Force Nordea class to use ECommerce protocol.
+     * Force Medicinos class to use IPizza2015 protocol.
      *
-     * @param RKD\Banklink\Protocol\ECommerce $protocol   Protocol used
+     * @param RKD\Banklink\Protocol\IPizza2015 $protocol   Protocol used
      */
-    public function __construct(ECommerce $protocol)
+    public function __construct(IPizza2015 $protocol)
     {
         parent::__construct($protocol);
     }
