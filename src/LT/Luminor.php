@@ -70,13 +70,4 @@ class Luminor extends Banklink
             'VK_PANK' => '40100'
         ];
     }
-    /**
-     * Detect if bank sent us data with encoding field.
-     *
-     * @return string|null Encoding field name
-     */
-    protected function getEncodingField() : string
-    {
-        return 'windows-1257';
-    }
 }
