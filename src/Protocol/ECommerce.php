@@ -141,7 +141,7 @@ class ECommerce implements ProtocolInterface
      */
     public function getPaymentRequest(
         int $orderId,
-        float $sum,
+        $sum,
         string $message,
         string $language = 'EST',
         string $currency = 'EUR',

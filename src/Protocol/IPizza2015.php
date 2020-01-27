@@ -87,7 +87,7 @@ class IPizza2015 extends IPizza
      */
     public function getPaymentRequest(
         int $orderId,
-        float $sum,
+        $sum,
         string $message,
         string $language = 'ENG',
         string $currency = 'EUR',

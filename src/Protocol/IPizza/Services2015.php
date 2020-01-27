@@ -2,12 +2,13 @@
 /**
  * RKD Banklink.
  *
- * @link https://github.com/renekorss/Banklink/
+ * @link      https://github.com/renekorss/Banklink/
  *
- * @author Rene Korss <rene.korss@gmail.com>
+ * @author    Rene Korss <rene.korss@gmail.com>
  * @copyright 2016-2019 Rene Korss
- * @license MIT
+ * @license   MIT
  */
+
 namespace RKD\Banklink\Protocol\IPizza;
 
 use UnexpectedValueException;
@@ -74,7 +75,7 @@ final class Services2015
      * Keep it readable
      * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
      */
-    public static function getFields(string $serviceId) : array
+    public static function getFields(string $serviceId): array
     {
         switch ($serviceId) {
             case self::PAYMENT_REQUEST_1001:

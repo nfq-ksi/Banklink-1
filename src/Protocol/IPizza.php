@@ -213,7 +213,7 @@ class IPizza implements ProtocolInterface
      */
     public function getPaymentRequest(
         int $orderId,
-        float $sum,
+        $sum,
         string $message,
         string $language = 'EST',
         string $currency = 'EUR',
@@ -430,7 +430,7 @@ class IPizza implements ProtocolInterface
     public function getSignature(array $data, string $encoding = 'UTF-8') : string
     {
         $mac = $this->generateSignature($data, $encoding);
-
+        
         if (is_file($this->privateKey)) {
             $privateKey = openssl_pkey_get_private('file://'.$this->privateKey, $this->privateKeyPassword);
         } elseif (is_string($this->privateKey)) {
@@ -473,6 +473,7 @@ class IPizza implements ProtocolInterface
         }
 
         foreach ($fields as $key) {
+            
             // Check if field exists
             if (!isset($data[$key]) || $data[$key] === false || is_null($data[$key])) {
                 throw new UnexpectedValueException(
@@ -481,7 +482,7 @@ class IPizza implements ProtocolInterface
             }
 
             $value = $data[$key];
-            $length = $this->useMbStrlen ? mb_strlen($value, $encoding) : strlen($value);
+            $length = $this->useMbStrlen ? mb_strlen(iconv($encoding, 'UTF-8', $value), 'UTF-8') : strlen($value);
             $mac .= str_pad($length, 3, '0', STR_PAD_LEFT).$value;
         }
 

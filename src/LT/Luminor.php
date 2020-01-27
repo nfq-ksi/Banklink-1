@@ -33,6 +33,11 @@ class Luminor extends Banklink
     protected $requestUrl = 'https://ib.dnb.lt/loginb2b.aspx';
 
     /**
+     * @var string 
+     */
+    protected $responseEncoding = 'windows-1257';
+    
+    /**
      * Test request url.
      *
      * @var mixed
@@ -64,5 +69,14 @@ class Luminor extends Banklink
         return [
             'VK_PANK' => '40100'
         ];
+    }
+    /**
+     * Detect if bank sent us data with encoding field.
+     *
+     * @return string|null Encoding field name
+     */
+    protected function getEncodingField() : string
+    {
+        return 'windows-1257';
     }
 }
