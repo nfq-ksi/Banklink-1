@@ -51,4 +51,16 @@ class Siauliu extends Banklink
     {
         parent::__construct($protocol);
     }
+
+    /**
+     * Additional request fields merged to request data
+     *
+     * @return array Array of additional request fields to send to bank
+     */
+    protected function getAdditionalRequestFields() : array
+    {
+        return [
+            'VK_PANK' => '71800'
+        ];
+    }
 }

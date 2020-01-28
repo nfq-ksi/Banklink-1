@@ -25,6 +25,11 @@ use RKD\Banklink\Protocol\IPizza2015;
 class Citadele extends Banklink
 {
     /**
+     * @var string
+     */
+    protected $sCharset = 'windows-1257';
+
+    /**
      * Request url.
      *
      * @var mixed
