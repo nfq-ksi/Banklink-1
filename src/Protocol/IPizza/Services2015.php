@@ -90,7 +90,6 @@ final class Services2015
                     'VK_NAME',
                     'VK_REF',
                     'VK_MSG',
-                    'VK_RETURN'
                 ];
                 break;
             case self::PAYMENT_REQUEST_1002:
