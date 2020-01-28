@@ -33,6 +33,11 @@ class Medicinos extends Banklink
     protected $requestUrl = 'https://ibs.medbank.lt/loginb2b.aspx';
 
     /**
+     * @var string
+     */
+    protected $responseEncoding = 'windows-1257';
+
+    /**
      * Test request url.
      *
      * @var mixed

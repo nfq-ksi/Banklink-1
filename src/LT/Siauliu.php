@@ -31,6 +31,11 @@ class Siauliu extends Banklink
     protected $requestUrl = 'https://online.sb.lt/ib/site/ibpay/login';
 
     /**
+     * @var string
+     */
+    protected $responseEncoding = 'windows-1257';
+
+    /**
      * Test request url.
      *
      * @var mixed
