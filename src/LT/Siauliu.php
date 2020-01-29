@@ -60,7 +60,9 @@ class Siauliu extends Banklink
     protected function getAdditionalRequestFields() : array
     {
         return [
-            'VK_PANK' => '71800'
+            'VK_PANK' => '71800',
+            'VK_PCODE' => '',
+            'VK_TERM' => '',
         ];
     }
 }

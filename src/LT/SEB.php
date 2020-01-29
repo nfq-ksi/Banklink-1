@@ -31,11 +31,6 @@ class SEB extends Banklink
     protected $requestUrl = 'https://e.seb.lt/mainib/web.p';
 
     /**
-     * @var string
-     */
-    protected $responseEncoding = 'windows-1257';
-
-    /**
      * Test request url.
      *
      * @var mixed

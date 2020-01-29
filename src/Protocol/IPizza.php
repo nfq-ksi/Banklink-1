@@ -430,7 +430,7 @@ class IPizza implements ProtocolInterface
     public function getSignature(array $data, string $encoding = 'UTF-8') : string
     {
         $mac = $this->generateSignature($data, $encoding);
-        
+
         if (is_file($this->privateKey)) {
             $privateKey = openssl_pkey_get_private('file://'.$this->privateKey, $this->privateKeyPassword);
         } elseif (is_string($this->privateKey)) {
@@ -473,12 +473,10 @@ class IPizza implements ProtocolInterface
         }
 
         foreach ($fields as $key) {
-            
+
             // Check if field exists
             if (!isset($data[$key]) || $data[$key] === false || is_null($data[$key])) {
-                throw new UnexpectedValueException(
-                    vsprintf('Field %s must be set to use service %s.', [$key, $service])
-                );
+            continue;
             }
 
             $value = $data[$key];
