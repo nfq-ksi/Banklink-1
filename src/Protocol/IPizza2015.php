@@ -102,7 +102,7 @@ class IPizza2015 extends IPizza
             static::FIELD_STAMP => $orderId,
             static::FIELD_AMOUNT => $sum,
             static::FIELD_CURR => $currency,
-            static::FIELD_REF => ProtocolHelper::calculateReference($orderId),
+            static::FIELD_REF => $orderId,
             static::FIELD_MSG => $message,
             static::FIELD_RETURN => $this->requestUrl,
             static::FIELD_LANG => $language,
