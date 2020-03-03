@@ -38,6 +38,11 @@ class SEB extends Banklink
     protected $testRequestUrl = 'https://e.seb.lt/mainib/web.p';
 
     /**
+     * @var string
+     */
+    protected $responseEncoding = 'windows-1257';
+    
+    /**
      * Force SEB class to use IPizza2015 protocol.
      *
      * @param RKD\Banklink\Protocol\IPizza2015 $protocol   Protocol used
