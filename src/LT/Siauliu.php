@@ -28,7 +28,7 @@ class Siauliu extends Banklink
      *
      * @var mixed
      */
-    protected $requestUrl = 'https://online.sb.lt/ib/site/ibpay/login';
+    protected $requestUrl = 'https://e.sb.lt/ibpay/redirect';
 
     /**
      * @var string
@@ -40,7 +40,7 @@ class Siauliu extends Banklink
      *
      * @var mixed
      */
-    protected $testRequestUrl = 'https://online.sb.lt/ib/site/ibpay/login';
+    protected $testRequestUrl = 'https://e.sb.lt/ibpay/redirect';
 
     /**
      * Force Siauliu class to use IPizza2015 protocol.
