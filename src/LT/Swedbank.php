@@ -28,14 +28,14 @@ class Swedbank extends Banklink
      *
      * @var mixed
      */
-    protected $requestUrl = 'https://www.swedbank.lt/banklink/';
+    protected $requestUrl = 'https://www.swedbank.lt/banklink';
 
     /**
      * Test request url.
      *
      * @var mixed
      */
-    protected $testRequestUrl = 'https://www.swedbank.lt/banklink/';
+    protected $testRequestUrl = 'https://www.swedbank.lt/banklink';
 
     /**
      * Force SEB class to use IPizza2015 protocol.

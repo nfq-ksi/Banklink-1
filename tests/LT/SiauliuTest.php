@@ -14,12 +14,12 @@ class SiauliuTest extends SEBTest
     protected $bankClass = "RKD\Banklink\LT\Siauliu";
 
     protected $requestUrl = [
-        'payment' => 'https://online.sb.lt/ib/site/ibpay/login',
-        'auth' => 'https://online.sb.lt/ib/site/ibpay/login'
+        'payment' => 'https://e.sb.lt/ibpay/redirect',
+        'auth' => 'https://e.sb.lt/ibpay/redirect'
     ];
     protected $testRequestUrl = [
-        'payment' => 'https://online.sb.lt/ib/site/ibpay/login',
-        'auth' => 'https://online.sb.lt/ib/site/ibpay/login'
+        'payment' => 'https://e.sb.lt/ibpay/redirect',
+        'auth' => 'https://e.sb.lt/ibpay/redirect'
     ];
 
     /**
